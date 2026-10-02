@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather App — Tugas Rutin 5</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🌤️ Weather App</h1>
+
+    <!-- Search -->
+    <div class="search-box">
+      <input
+        type="text"
+        id="cityInput"
+        placeholder="Masukkan nama kota..."
+        autocomplete="off"
+      />
+      <button id="searchBtn">Cari</button>
+    </div>
+
+    <!-- Toggle °C / °F -->
+    <div class="toggle-box">
+      <button id="toggleUnit" class="unit-btn active">°C</button>
+      <button id="toggleUnitF" class="unit-btn">°F</button>
+    </div>
+
+    <!-- Loading -->
+    <div id="loading" class="hidden">⏳ Memuat data cuaca...</div>
+
+    <!-- Error -->
+    <div id="error" class="hidden error-box"></div>
+
+    <!-- Current Weather -->
+    <div id="weatherResult" class="hidden">
+      <div class="weather-card">
+        <h2 id="cityName"></h2>
+        <img id="weatherIcon" src="" alt="weather icon" />
+        <p id="temperature" class="temp"></p>
+        <p id="description" class="desc"></p>
+        <p id="humidity">💧 Kelembaban: </p>
+        <p id="wind">💨 Angin: </p>
+      </div>
+    </div>
+
+    <!-- 5-Day Forecast -->
+    <div id="forecastSection" class="hidden">
+      <h3> Forecast 5 Hari</h3>
+      <div id="forecastList" class="forecast-grid"></div>
+    </div>
+
+    <!-- Search History -->
+    <div id="historySection" class="hidden">
+      <h3>🕒 Riwayat Pencarian</h3>
+      <ul id="historyList"></ul>
+      <button id="clearHistory" class="clear-btn">Hapus Riwayat</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
